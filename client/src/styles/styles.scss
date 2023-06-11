@@ -1,0 +1,276 @@
+@import 'reset/reset.scss';
+
+$width: 1140px;
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header-container {
+    &__content {
+        width: 80%;
+        margin: 0 auto;
+        padding: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__right {
+            border: 1px solid rgb(122, 128, 133);
+            border-radius: 14px;
+            padding: 6px;
+            .content-login, .content-logout {
+                padding: 2px;
+                display: flex;
+                .avatar-img {
+                    margin-right: 14px;
+                    width: 20px;
+                }
+            }
+            .login-button {
+                border: none;
+                background: none;
+                border-radius: 6px;
+            }
+            .login-button:hover {
+                cursor: pointer;
+            }
+        }
+        &__right:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.auth-container {
+    width: 420px;
+    margin: 4rem auto;
+    padding-bottom: 15px;
+
+    &__content {
+        h1, p {
+            text-align: center;
+        }
+        .form-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            button {
+                width: 84%;
+                background-color:deepskyblue;
+                color: #fff;
+                padding: 4px;
+                border-radius: 8px;
+                border: none;
+            }
+            button:hover {
+                cursor: pointer;
+                opacity: 0.76;
+            }
+            div {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .form-input {
+            width: 84%;
+            margin-bottom: 4px;
+            border: 1px solid cadetblue;
+            padding: 4px 0 4px 8px;
+            border-radius: 4px;
+            outline: none;
+        }
+        .form-input:focus{
+            border: 1.2px solid deepskyblue;
+        }
+    }
+}
+
+.home-container {
+    width: $width;
+    margin: 1rem auto;
+    &__content {
+        padding: 8px;
+        &__list {
+            margin-left: 22px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    .place-item {
+        width: 200px;
+        margin-bottom: 18px;
+        .img {
+            width: 350px;
+            border-radius: 15px;
+        }
+    }
+    .place-item:hover{
+        cursor: pointer;
+        opacity: 0.9;
+    }
+}
+
+.user-info__container {
+    width: $width;
+    padding: 14px;
+    margin: 0 auto;
+    &__content {
+        width: 40%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        button {
+            padding: 0 10px 0 10px;
+            font-size: 19px;
+            border-radius: 6px;
+            background-color: deepskyblue;
+            color: #fff;
+            border: none;
+            padding: 2px 10px;
+        }
+        button:hover {
+            cursor: pointer;
+            background-color: skyblue;
+        }
+    }
+}
+
+.profile {
+    width: $width;
+    margin: 0 auto;
+    &-content {
+        width: 40%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+        .logout-button {
+            margin-top: 8px;
+            background-color: mediumslateblue;
+            color: aliceblue;
+            outline: none;
+            padding: 4px 18px;
+            border-radius: 7px;
+            border: none;
+        }
+        .logout-button:hover{
+            cursor: pointer;
+            background-color: slateblue;
+        }
+    }
+
+}
+
+.bookings {
+    width: $width;
+    margin: 0 auto;
+    &-content {
+        width: 60%;
+        margin: 0 auto;
+        padding: 10px;
+        p {
+            text-align: center;
+        }
+    }
+}
+
+.placeItemInfo-container {
+    width: $width;
+    margin: 0 auto;
+    &__content {
+        padding: 4px;
+        &__info {
+            .location {
+                padding: 4px;
+                width: 28%;
+                display: flex;
+                align-items: center;
+                img {
+                    margin-right: 6px;
+                }
+                p {
+                    text-decoration: underline;
+                }
+            }
+            .images {
+                margin-top: 4px;
+                img {
+                    border-radius: 12px;
+                }
+            }
+            .more-details {
+                display: flex;
+                width: 90%;
+                .description {
+                    width: 60%;
+                }
+                .booking {
+                    width: 40%;
+                    display: flex;
+                    padding: 8px;
+                    flex-direction: column;
+                    h3 {
+                        text-align: center;
+                    }
+                    &-content {
+                        width: 80%;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 4px;
+                        div {
+                            display: flex;
+                            align-items: center;
+                            img {
+                                margin-left: 8px;
+                            }
+                        }
+                    }
+                    .book-button {
+                        border-radius: 12px;
+                        background-color: darkorchid;
+                        color: #fff;
+                        font-size: 19px;
+                        border: none;
+                        padding: 2px;
+                    }
+                    .book-button:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (width < 450px) {
+    .header-container { 
+        &__content {
+            min-width: 400px;
+            display: flex;
+            padding: 0 10px 0 10px;
+        }
+    }
+}
+
+// @media screen and (width < 1160px) {
+//     .home-container {
+//         width: 1040px;
+//         .place-item {
+//             width: 170px;
+//             margin-bottom: 18px;
+//             .img {
+//                 width: 250px;
+//                 border-radius: 15px;
+//             }
+//         }
+//     }
+// }

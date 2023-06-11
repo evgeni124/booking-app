@@ -1,0 +1,12 @@
+.place-item {
+    width: 200px;
+    margin-bottom: 18px;
+    .img {
+        width: 350px;
+        border-radius: 15px;
+    }
+}
+.place-item:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}

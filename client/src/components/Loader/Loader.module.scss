@@ -1,0 +1,17 @@
+$width_loader: 40px;
+$height_loader: $width_loader;
+
+.loader {
+    width: $width_loader;
+    height: $width_loader;
+    border: 4px solid aquamarine;
+    border-radius: 50%;
+    border-left-color: black;
+    animation: loader 1.5s linear infinite;
+}
+
+@keyframes loader {
+    100% {
+        transform: rotate(360deg);
+    }
+}
